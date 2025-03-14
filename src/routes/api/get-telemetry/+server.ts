@@ -10,13 +10,9 @@ let db = drizzle(process.env.DATABASE_URL!);
 export const GET: RequestHandler = async ({ url }) => {
     const numOfRows = Number(url.searchParams.get('rows') ?? 0);
 
-    console.log(numOfRows);
-
     if (isNaN(numOfRows)) error(400, 'Invalid number of rows');
 
     const rows = await db.select().from(schema.cansat).orderBy(desc(schema.cansat.id)).limit(numOfRows);
-
-    console.log(rows);
 
     return new Response(JSON.stringify(rows));
 }
