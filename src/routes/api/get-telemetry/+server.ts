@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { error, json } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
 import { drizzle } from 'drizzle-orm/mysql2';
 import { desc } from 'drizzle-orm';
