@@ -28,6 +28,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"apexcharts": "^4.5.0",
 		"dotenv": "^16.4.7",
 		"drizzle-orm": "^0.40.0",
 		"mysql2": "^3.13.0"

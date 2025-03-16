@@ -6,6 +6,8 @@
 	let { children } = $props();
 
 	async function fetchRows() {
+		console.log('fetching');
+
         const response = await fetch(
             '/api/get-telemetry?rows=10',
             {
