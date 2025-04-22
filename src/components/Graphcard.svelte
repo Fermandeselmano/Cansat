@@ -1,9 +1,11 @@
 <script lang="ts">
-    import { Card, Chart, P } from "flowbite-svelte";
+    import { Card, P, Chart } from "flowbite-svelte";
     import { infoRows, type Cansat } from "../routes/global";
     import { onDestroy } from "svelte";
 
     export let title: string = "Default";
+    export let value: string = "0.00";
+    export let href: string = "#";
     export let y_key: keyof Cansat;
 
     let x_data: any[] = $infoRows.map((row) => row.time.split(" ")[1]);
@@ -11,8 +13,6 @@
 
     let options = {
         chart: {
-            height: "100%",
-            maxWidth: "100%",
             type: "area",
             fontFamily: "Inter, sans-serif",
             dropShadow: {
@@ -47,7 +47,7 @@
             width: 6,
         },
         grid: {
-            show: true,
+            show: false,
             strokeDashArray: 4,
             padding: {
                 left: 2,
@@ -65,7 +65,7 @@
         xaxis: {
             categories: $infoRows.map((row) => row.time).reverse().map((time) => time.split(" ")[1]),
             labels: {
-                show: true,
+                show: false,
             },
             axisBorder: {
                 show: false,
@@ -75,7 +75,7 @@
             },
         },
         yaxis: {
-            show: true,
+            show: false,
         },
     };
 
@@ -97,7 +97,8 @@
     });
 </script>
 
-<Card size="none" class="h-full">
+<Card class="flex flex-col align-middle justify-center gap-2 w-full h-full" href={href}>
+    <Chart {options} class="h-full w-full" />
+    <P class="font-semibold text-4xl text-center">{value}</P>
     <P class="font-bold text-xl text-center">{title}</P>
-    <Chart {options} class="h-full" />
 </Card>
