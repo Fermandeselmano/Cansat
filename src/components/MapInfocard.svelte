@@ -38,7 +38,7 @@
     });
   </script>
   
-  <Card class="p-0 col-span-2 w-full h-full">
+  <Card class="p-0 col-span-2 w-full h-full !max-w-full">
     <div bind:this={mapContainer} class="h-full w-full"></div>
   </Card>
   

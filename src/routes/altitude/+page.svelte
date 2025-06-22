@@ -6,5 +6,5 @@
 </script>
 
 <div class="h-full w-full p-8">
-    <Graphcard title="Temperatura" value={$infoRows[0].temperatura + "°C"} href="/temperatura" y_key="temperatura" />
+    <Graphcard title="Altitude" value={$infoRows[0].altitude + "m"} href="/altitude" y_key="altitude" />
 </div>

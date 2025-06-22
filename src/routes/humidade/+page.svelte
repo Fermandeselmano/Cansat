@@ -6,5 +6,5 @@
 </script>
 
 <div class="h-full w-full p-8">
-    <Graphcard title="Humidade" y_key="humidade" />
+    <Graphcard title="Humidade" value={$infoRows[0].humidade + "%"} href="/humidade" y_key="humidade" />
 </div>

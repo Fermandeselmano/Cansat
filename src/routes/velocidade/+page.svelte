@@ -6,5 +6,5 @@
 </script>
 
 <div class="h-full w-full p-8">
-    <Graphcard title="Velocidade" y_key="velocidade" />
+    <Graphcard title="Velocidade" value={$infoRows[0].velocidade + "m/s"} href="/velocidade" y_key="velocidade" />
 </div>

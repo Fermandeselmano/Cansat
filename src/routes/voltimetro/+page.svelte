@@ -4,5 +4,5 @@
 </script>
 
 <div class="h-full w-full p-8">
-    <Graphcard title="Voltimetro" y_key="voltagem" />
+    <Graphcard title="Voltimetro" value={$infoRows[0].voltagem + "V"} href="/voltimetro" y_key="voltagem" />
 </div>

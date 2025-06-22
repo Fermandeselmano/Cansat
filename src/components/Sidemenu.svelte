@@ -1,6 +1,6 @@
 <script lang="ts">
     import { page } from '$app/stores';
-    import { DarkMode, Sidebar, SidebarBrand, SidebarGroup, SidebarItem, SidebarWrapper } from 'flowbite-svelte';
+    import { DarkMode, P, Sidebar, SidebarBrand, SidebarGroup, SidebarItem, SidebarWrapper } from 'flowbite-svelte';
     import { HomeSolid, PlaySolid } from 'flowbite-svelte-icons';
 
     let site = {
@@ -27,6 +27,12 @@
         </SidebarGroup>
 
         <SidebarGroup border>
+            <SidebarItem label="Altitude" href="/altitude" class="font-medium">
+                <svelte:fragment slot="icon">
+                    <PlaySolid class="w-5 h-5" />
+                </svelte:fragment>
+            </SidebarItem>
+
             <SidebarItem label="Temperatura" href="/temperatura" class="font-medium">
                 <svelte:fragment slot="icon">
                     <PlaySolid class="w-5 h-5" />
@@ -71,4 +77,5 @@
         </SidebarGroup>
     </SidebarWrapper>
     <DarkMode class="absolute bottom-2 left-2" />
+    <P class="absolute bottom-2 right-2 text-xs">PAP realizada por Elmano Fernandes</P>
 </Sidebar>

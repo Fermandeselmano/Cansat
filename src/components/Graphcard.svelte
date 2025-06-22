@@ -97,8 +97,15 @@
     });
 </script>
 
-<Card class="flex flex-col align-middle justify-center gap-2 w-full h-full" href={href}>
-    <Chart {options} class="h-full w-full" />
-    <P class="font-semibold text-4xl text-center">{value}</P>
-    <P class="font-bold text-xl text-center">{title}</P>
+<Card
+  href={href}
+  class="flex flex-col flex-grow justify-between gap-2 w-full h-full p-4 !max-w-full"
+>
+  <div class="flex-grow min-h-0">
+    <Chart {options} class="w-full h-full" />
+  </div>
+  <div class="text-center mt-4">
+    <P class="font-semibold text-4xl">{value}</P>
+    <P class="font-bold text-xl">{title}</P>
+  </div>
 </Card>
