@@ -39,7 +39,7 @@
     scene.add(ambient, hemi, directional);
 
     const loader = new GLTFLoader();
-    loader.load('/coca_cola_soda_can.glb', (gltf) => {
+    loader.load('/soda_can.glb', (gltf) => {
       const rawModel = gltf.scene;
 
       rawModel.traverse((child) => {
@@ -61,6 +61,7 @@
       pivot.scale.set(2, 2, 2);
       scene.add(pivot);
       model = pivot;
+      model.position.z -= 20;
     });
 
     const animate = () => {
