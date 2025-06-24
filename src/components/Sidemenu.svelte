@@ -12,7 +12,7 @@
     $: activeUrl = $page.url.pathname;
 </script>
 
-<Sidebar class="h-full w-1/7 min-w-[200px] shadow-2xl" {activeUrl}>
+<Sidebar class="h-full w-1/7 min-w-[200px] shadow-2xl relative" {activeUrl}>
     <SidebarWrapper class="h-full bg-white">
         <SidebarGroup>
             <SidebarBrand href="/" {site} />
@@ -76,6 +76,10 @@
             </SidebarItem>
         </SidebarGroup>
     </SidebarWrapper>
-    <DarkMode class="absolute bottom-2 left-2" />
-    <P class="absolute bottom-2 right-2 text-xs">PAP realizada por Elmano Fernandes</P>
+
+    <div class="absolute top-2 right-2">
+        <DarkMode />
+    </div>
+
+    <P class="absolute bottom-2 left-2 text-xs">PAP realizada por Elmano Fernandes</P>
 </Sidebar>
